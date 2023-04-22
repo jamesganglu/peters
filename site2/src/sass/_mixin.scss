@@ -1,0 +1,59 @@
+
+@mixin hamburger($w:30px, $h:30px, $thick:4px, $color:#fff,$color-alt:#fff, $round:2px){
+  padding: 0;
+  width: $w;
+  height: $h;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  display: inline-block;
+  position: relative;
+  span{
+    display: block;
+    position: absolute;
+    height: $thick;
+    width: 100%;
+    background: $color;
+    
+    border-radius: $round;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+    span:nth-child(1) {
+      top: 0px;
+    }
+
+    span:nth-child(2), span:nth-child(3) {
+      top: $h/2 - $thick/2;
+    }
+
+    span:nth-child(4) {
+      top: $h - $thick;
+    }
+
+  .show-menu &{
+    span{
+    background: $color-alt;
+    }
+    span:nth-child(1) {
+      top: $h/2 - $thick/2;
+      width: 0%;
+      left: 50%;
+    }
+    span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    span:nth-child(4) {
+      top: $h/2 - $thick/2;
+      width: 0%;
+      left: 50%;
+    }
+  }
+
+}

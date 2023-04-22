@@ -1,0 +1,157 @@
+body {
+  min-height: 75rem;
+}
+
+img{
+	max-width:100%;
+}
+
+.slide-show{
+	padding:0 30px;
+}
+.slick-slide{
+	padding:8px;
+}
+.slick-list{
+	padding:0!important;
+}
+
+#primary-nav{
+	background: rgb(0,0,102);
+	background: linear-gradient(135deg, rgba(0,0,102,1) 26%, rgba(0,102,136,1) 86%);
+	color:#fff;
+	a{
+		color: #fff;
+	}
+
+	#nabbar-links{
+		display: none;
+		.show-menu &{
+			display: block;
+		}
+	}
+
+	@include media-breakpoint-up(lg){
+		#nabbar-links{
+			display: block;
+		}
+	}
+}
+
+h1{
+	color: #fff;
+	margin-bottom: 1em;
+}
+h2{
+	margin-bottom: 1em;
+}
+.table{
+	color:inherit;
+}
+#primary-nav{
+	a{
+		display: inline-block;
+		padding:.5em 1em;
+		border-radius: 5px;
+		&.active{
+			background: #fff;
+			color: #000088;
+		}
+	}
+}
+
+.navbar-toggler{
+	@include hamburger();
+}
+
+section{
+	padding-top:1.5em;
+	padding-bottom: 1.5em;
+	min-height:100vh;
+}
+
+footer{
+	background: #000088;
+	color:#fff;
+	padding:1rem 0;
+	a{
+		display: inline-block;
+		color: #fff;
+		margin:0 1em;
+		&:hover{
+			color: #fff;
+		}
+	}
+}
+
+#intro{
+  	padding-top: 5rem;
+	background: url('../images/11.jpg') top center no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	display: flex;
+	align-items:center;
+	position: relative;
+	.text-overlay{
+		background: rgba(#000, .6);
+		padding:1.5em;
+		color: #fff;
+	}
+}
+
+#about{
+	background: url('../images/1.jpg') top center no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	display: flex;
+	align-items:center;
+	.text-overlay{
+		background: rgba(#fff, .8);
+		padding:1.5em;
+	}
+}
+
+#service{
+	background: url('../images/15.jpg') top center no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	display: flex;
+	align-items:center;
+	.text-overlay{
+		background: rgba(#fff, .8);
+		padding:1.5em;
+	}
+}
+
+#facts{
+  	padding-top: 5rem;
+	background: url('../images/30.jpg') top center no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	position: relative;
+	display: flex;
+	align-items:center;
+	.text-overlay{
+		background: rgba(#000, .8);
+		padding:1.5em;
+		color: #fff;
+	}
+}
+#show-case{
+  	padding-top: 5rem;
+	background: url('../images/16.jpg') top center no-repeat;
+	background-size:cover;
+	background-attachment: fixed;
+	position: relative;
+	display: flex;
+	align-items:center;
+}
+
+#contact{
+  	padding: 5rem 0;
+  	background: #fff;
+	position: relative;
+	min-height:0;
+	.text-overlay{
+	}
+}
